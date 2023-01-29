@@ -44,7 +44,7 @@ task:
       - sudo apt-get install libxml2 -y
       - sudo apt-get install liblz4-tool -y
       - sudo apt-get install libncurses5-dev -y
-      - sudo apt-get install libsd11.2-dev -y
+      - sudo apt-get install libsdl1.2-dev -y
       - sudo apt-get install imagemagick -y
       - sudo apt-get install lunzip -y
       - sudo apt-get install lzop -y
