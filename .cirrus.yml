@@ -31,24 +31,24 @@ task:
       - echo "============================"
       - echo "Syncing The Sources..."
       - echo "============================"
-      - sudo apt-get install bc 
-      - sudo apt-get install bison 
-      - sudo apt-get install build-essential
-      - sudo apt-get install curl
-      - sudo apt-get install flex
-      - sudo apt-get install g++-multilib
-      - sudo apt-get install gcc-multilib
-      - sudo apt-get install git
-      - sudo apt-get install gnupg
-      - sudo apt-get install gperf
-      - sudo apt-get install libxml2
-      - sudo apt-get install liblz4-tool
-      - sudo apt-get install libncurses5-dev
-      - sudo apt-get install libsd11.2-dev
-      - sudo apt-get install imagemagick
-      - sudo apt-get install lunzip 
-      - sudo apt-get install lzop
-      - sudo apt-get install Schedtool
+      - sudo apt-get install bc -y
+      - sudo apt-get install bison -y
+      - sudo apt-get install build-essential -y
+      - sudo apt-get install curl -y
+      - sudo apt-get install flex -y
+      - sudo apt-get install g++-multilib -y
+      - sudo apt-get install gcc-multilib -y
+      - sudo apt-get install git -y
+      - sudo apt-get install gnupg -y
+      - sudo apt-get install gperf -y
+      - sudo apt-get install libxml2 -y
+      - sudo apt-get install liblz4-tool -y
+      - sudo apt-get install libncurses5-dev -y
+      - sudo apt-get install libsd11.2-dev -y
+      - sudo apt-get install imagemagick -y
+      - sudo apt-get install lunzip -y
+      - sudo apt-get install lzop -y
+      - sudo apt-get install Schedtool-y
       - sudo apt-get update
       - sudo apt-get install default-jdk -y
       
