@@ -27,7 +27,7 @@ task:
       - lsblk
       - ls -l -a -h
   
-  Installdependencies_script:
+  Syn_script:
       - echo "============================"
       - echo "Syncing The Sources..."
       - echo "============================"
@@ -83,12 +83,12 @@ task:
       - PATH="$HOME/bin:$PATH"
       - source ~/.profile 
   
-  Turncache_script:
+
       - export USE_CCACHE=1
       - export CCACHE_COMPRESS=1
       - export CCACHE_MAXSIZE=50G # 50 GB
       
-   Repo_script:   
+   
       
       - mkdir -p ~/lineage-20-build-gsi
       - cd ~/lineage-20-build-gsi
