@@ -27,7 +27,7 @@ task:
       - lsblk
       - ls -l -a -h
   
-  Sync_script:
+  Installdependencies_script:
       - echo "============================"
       - echo "Syncing The Sources..."
       - echo "============================"
@@ -79,10 +79,16 @@ task:
       - sudo apt-get install curl -y
       - mkdir -p ~/bin
       - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-      - chmod a+x ~/bin/repo
-
-      - echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
-      - source ~/.bashrc
+      - chmod a+x ~/bin/repo 
+      - PATH="$HOME/bin:$PATH"
+      - source ~/.profile 
+  
+  Turncache_script:
+      - export USE_CCACHE=1
+      - export CCACHE_COMPRESS=1
+      - export CCACHE_MAXSIZE=50G # 50 GB
+      
+   Repo_script:   
       
       - mkdir -p ~/lineage-20-build-gsi
       - cd ~/lineage-20-build-gsi
@@ -102,8 +108,6 @@ task:
       - echo "============================".  
       - cd ~/lineage-20-build-gsi
       - $EXTRA_CMD
-      - export USE_CCACHE=1
-      - export CCACHE_EXEC=/usr/bin/ccache
-      - ccache -M 50G
+       
       - . lineage_build_unified/buildbot_unified.sh treble 64VN 64VS 64GN
       
