@@ -84,10 +84,11 @@ task:
       - echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       - source ~/.bashrc
       
-      - mkdir -p ~/pixel
-      - cd ~/pixel
-      - git clone https://github.com/rombuilder/treble_build_pe -b thirteen 
-      
+      - mkdir -p ~/lineage-20-build-gsi
+      - cd ~/lineage-20-build-gsi
+      - repo init -u https://github.com/LineageOS/android.git -b lineage-20.0
+      - git clone https://github.com/AndyCGYan/lineage_build_unified lineage_build_unified -b lineage-20-light
+      - git clone https://github.com/AndyCGYan/lineage_patches_unified lineage_patches_unified -b lineage-20-light
 
       - cd ~
       
@@ -98,11 +99,11 @@ task:
   Build_script:
       - echo "============================"
       - echo "Starting the Build..."
-      - echo "============================"
-      - cd ~/pixel
+      - echo "============================".  
+      - cd ~/lineage-20-build-gsi
       - $EXTRA_CMD
       - export USE_CCACHE=1
       - export CCACHE_EXEC=/usr/bin/ccache
       - ccache -M 50G
-      - . treble_build_pe/build.sh thirteen
+      - . lineage_build_unified/buildbot_unified.sh treble 64VN 64VS 64GN
       
