@@ -48,7 +48,7 @@ task:
       - sudo apt-get install imagemagick -y
       - sudo apt-get install lunzip -y
       - sudo apt-get install lzop -y
-      - sudo apt-get install schedtool-y 
+      - sudo apt-get install schedtool -y
       - sudo apt-get install squashfs-tools -y
       - sudo apt-get install xsltproc -y
       - sudo apt-get install zip -y
