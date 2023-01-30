@@ -53,7 +53,7 @@ task:
       - sudo apt-get install xsltproc -y
       - sudo apt-get install zip -y
     
-      - sudo apt-get install pthon -y
+      - sudo apt-get install python -y
       - sudo apt-get install xmlstarlet -y
       - sudo apt-get install virtualenv -y
       - sudo apt-get install xz-utils -y
