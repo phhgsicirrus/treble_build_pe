@@ -52,7 +52,7 @@ task:
       - sudo apt-get install squashfs-tools -y
       - sudo apt-get install xsltproc -y
       - sudo apt-get install zip -y
-      - sudo apt-get install zlib1g-dev -y
+    
       - sudo apt-get install pthon -y
       - sudo apt-get install xmlstarlet -y
       - sudo apt-get install virtualenv -y
